@@ -44,6 +44,7 @@ def descargar_config(es_audio=False):
         'quiet': True,
         'no_warnings': True,
         'ignoreerrors': True,
+        'cookiefile': 'cookies.txt',
     }
     if es_audio:
         opts.update({
