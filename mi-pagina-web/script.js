@@ -207,4 +207,19 @@ document.addEventListener('DOMContentLoaded', () => {
             animate();
         });
     }
+    // 9. Telegram Link Fix for iOS/Safari
+    // This addresses the "Safari cannot open the page because the address is invalid" issue
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+
+    document.querySelectorAll('.tg-link').forEach(link => {
+        link.addEventListener('click', function (e) {
+            if (isIOS) {
+                // On iOS, we avoid target="_blank" and use location.assign
+                // for better Universal Link handling in Safari.
+                e.preventDefault();
+                const url = this.getAttribute('href');
+                window.location.assign(url);
+            }
+        });
+    });
 });
