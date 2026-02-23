@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portafolio profesional de soluciones digitales y automatización. Desarrollador especializado en Bots de Telegram, Cloud y Aplicaciones Web.">
+    <title>Desarrollador Full-Stack | Innovación y Automatización</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Alexander<span>Code</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#about">Sobre Mí</a></li>
+                <li><a href="#web-apps">Apps</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#consultancy">Consultoría</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero-section">
+        <canvas id="binaryCanvas"></canvas>
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1 class="fade-in">Automatización y <span>Soluciones Digitales</span></h1>
+            <p class="fade-in-delay">Transformo ideas en herramientas potentes. Especialista en arquitecturas Cloud,
+                Bots inteligentes y aplicaciones web escalables.</p>
+            <div class="hero-btns fade-in-delay">
+                <a href="#projects" class="btn btn-primary">Ver Proyectos</a>
+                <a href="#contact" class="btn btn-outline">Trabajemos Juntos</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="reveal">Sobre Mí</h2>
+                <div class="accent-line"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <h3>Arquitecto de Software & Entusiasta del Cloud</h3>
+                    <p>Soy un desarrollador apasionado por optimizar flujos de trabajo. Con amplia experiencia en
+                        <strong>Python</strong> y <strong>Node.js</strong>, me especializo en crear ecosistemas
+                        digitales que funcionen de forma autónoma.
+                    </p>
+                    <p>Mi enfoque se centra en la infraestructura <strong>Cloud-Native</strong> (Render), gestión de
+                        datos con <strong>MongoDB</strong> y la integración de servicios mediante APIs robustas.</p>
+                    <div class="skills-tags">
+                        <span>Python</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
+                        <span>Render</span>
+                        <span>Cloud Architecture</span>
+                        <span>Telegram Bot API</span>
+                    </div>
+                </div>
+                <div class="about-stats reveal">
+                    <div class="stat-card">
+                        <i class="fas fa-robot"></i>
+                        <h4>Automatización</h4>
+                        <p>Bots inteligentes y efectivos</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <h4>Infraestructura</h4>
+                        <p>Despliegue escalable en la nube</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="web-apps" class="apps-section section-padding bg-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="reveal">Aplicaciones Web</h2>
+                <div class="accent-line"></div>
+            </div>
+            <div class="cards-grid">
+                <div class="glass-card reveal">
+                    <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Analytics Dashboard</h3>
+                    <p>Visualización de métricas en tiempo real con integración de base de datos.</p>
+                    <a href="#" class="link-btn">Próximamente <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="glass-card reveal">
+                    <div class="card-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Utility Tool Suite</h3>
+                    <p>Herramientas diseñadas para resolver problemas cotidianos de datos.</p>
+                    <a href="#" class="link-btn">Próximamente <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="reveal">Proyectos Destacados</h2>
+                <div class="accent-line"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-featured reveal">
+                    <div class="project-content">
+                        <span class="badge">Especial</span>
+                        <h3>Social Media Downloader Bot</h3>
+                        <p>Bot avanzado para descargar contenido de Instagram y TikTok sin marca de agua. Arquitectura
+                            distribuida en Render y MongoDB.</p>
+                        <ul class="tech-list">
+                            <li>Python</li>
+                            <li>Telegram API</li>
+                            <li>Render</li>
+                            <li>Cron-Jobs</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://t.me/MiBotmagico_bot" target="_blank" class="btn btn-sm btn-primary">Probar
+                                Bot <i class="fab fa-telegram-plane"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-visual reveal">
+                        <img src="images/botmagico.dolloardimg.jpeg" alt="Telegram Bot Logo" class="project-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="consultancy" class="consultancy-section section-padding bg-accent">
+        <div class="container">
+            <div class="consultancy-box reveal">
+                <div class="consult-info">
+                    <h2>Consultoría Técnica</h2>
+                    <p>Optimizo tus flujos en Render.com y el diseño de tus bases de datos NoSQL.</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Optimización de Bots de Telegram</li>
+                        <li><i class="fas fa-check"></i> Despliegue en Render y Cloud</li>
+                        <li><i class="fas fa-check"></i> Arquitectura MongoDB</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-white">Reservar Consulta</a>
+                </div>
+                <div class="consult-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="reveal">Contacto</h2>
+                <div class="accent-line"></div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <h3>¿Tienes un proyecto en mente?</h3>
+                    <p>Envíame un mensaje y te responderé en breve.</p>
+                    <div class="social-links">
+                        <a href="https://www.threads.net/@alexander.vega.n" target="_blank"><i
+                                class="fab fa-threads"></i></a>
+                        <a href="https://www.facebook.com/alexander.veganunez.71" target="_blank"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/alexander.vega.n?igsh=MTQzcngweGhuMnBnbQ=="
+                            target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form reveal">
+                    <form action="https://formspree.io/f/mqedgdbg" method="POST" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Tu Nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Tu Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" rows="5" placeholder="Cuéntame sobre tu proyecto..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary submit-btn">Enviar Mensaje</button>
+                        <div id="formStatus" class="form-status"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 DevStudio. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

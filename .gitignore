@@ -1,7 +1,0 @@
-.env
-cookies.txt
-__pycache__/
-*.mp3
-*.mp4
-venv/
-.vscode/
