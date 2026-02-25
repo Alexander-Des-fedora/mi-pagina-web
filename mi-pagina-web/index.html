@@ -17,6 +17,13 @@
 </head>
 
 <body>
+    <div id="loader" class="loader-wrapper">
+        <div class="loader-content">
+            <div class="loader-circle"></div>
+            <p>Iniciando sistema...</p>
+        </div>
+    </div>
+
     <nav id="navbar">
         <div class="nav-container">
             <a href="#" class="logo">Alexander<span>Code</span></a>
@@ -45,9 +52,9 @@
         <canvas id="binaryCanvas"></canvas>
         <div class="overlay"></div>
         <div class="hero-content">
-            <h1 class="fade-in">Automatización y <span>Soluciones Digitales</span></h1>
-            <p class="fade-in-delay">Transformo ideas en herramientas potentes. Especialista en arquitecturas Cloud,
-                Bots inteligentes y aplicaciones web escalables.</p>
+            <h1 class="fade-in">Automatización & <span>Soluciones Estratégicas</span></h1>
+            <p class="fade-in-delay">Transformo procesos complejos en herramientas autónomas y eficientes. Especialista
+                en arquitecturas Cloud, Bots inteligentes y ecosistemas digitales escalables.</p>
             <div class="hero-btns fade-in-delay">
                 <a href="#projects" class="btn btn-primary">Ver Proyectos</a>
                 <a href="#contact" class="btn btn-outline">Trabajemos Juntos</a>
@@ -66,20 +73,48 @@
             </div>
             <div class="about-grid">
                 <div class="about-text reveal">
-                    <h3>Arquitecto de Software & Entusiasta del Cloud</h3>
-                    <p>Soy un desarrollador apasionado por optimizar flujos de trabajo. Con amplia experiencia en
-                        <strong>Python</strong> y <strong>Node.js</strong>, me especializo en crear ecosistemas
-                        digitales que funcionen de forma autónoma.
+                    <h3>Arquitecto de Soluciones & Especialista en Automatización</h3>
+                    <p>Me apasiona resolver problemas complejos mediante la tecnología. Mi enfoque no es solo escribir
+                        código, sino construir herramientas que <strong>ahorren tiempo y optimicen procesos</strong>
+                        para personas y empresas.</p>
+                    <p>Desde la creación de bots inteligentes hasta el despliegue de infraestructuras escalables en el
+                        <strong>Cloud</strong>, cada línea de código que escribo tiene un propósito: la eficiencia y la
+                        autonomía.
                     </p>
-                    <p>Mi enfoque se centra en la infraestructura <strong>Cloud-Native</strong> (Render), gestión de
-                        datos con <strong>MongoDB</strong> y la integración de servicios mediante APIs robustas.</p>
-                    <div class="skills-tags">
-                        <span>Python</span>
-                        <span>Node.js</span>
-                        <span>MongoDB</span>
-                        <span>Render</span>
-                        <span>Cloud Architecture</span>
-                        <span>Telegram Bot API</span>
+
+                    <div class="skills-container">
+                        <div class="skill-category">
+                            <h4><i class="fas fa-server"></i> Backend & Bot Dev</h4>
+                            <div class="skills-tags">
+                                <span>Python</span>
+                                <span>Node.js</span>
+                                <span>Telegram Bot API</span>
+                                <span>Web Scraping</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4><i class="fas fa-database"></i> Datos & Cloud</h4>
+                            <div class="skills-tags">
+                                <span>MongoDB</span>
+                                <span>Render</span>
+                                <span>Cloud Native</span>
+                                <span>Docker</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4><i class="fas fa-code"></i> Frontend & UX</h4>
+                            <div class="skills-tags">
+                                <span>HTML5 / CSS3</span>
+                                <span>JavaScript ES6+</span>
+                                <span>Responsive Design</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-actions">
+                        <a href="CV_Alexander_Code.pdf" class="btn btn-primary" download>
+                            <i class="fas fa-download"></i> Descargar CV
+                        </a>
                     </div>
                 </div>
                 <div class="about-stats reveal">
@@ -108,14 +143,19 @@
                 <div class="glass-card reveal">
                     <div class="card-icon"><i class="fas fa-chart-line"></i></div>
                     <h3>Analytics Dashboard</h3>
-                    <p>Visualización de métricas en tiempo real con integración de base de datos.</p>
-                    <a href="#" class="link-btn">Próximamente <i class="fas fa-arrow-right"></i></a>
+                    <p>Plataforma para el monitoreo de KPIs y métricas de negocio con procesamiento de datos en tiempo
+                        real.</p>
+                    <div class="card-links">
+                        <span class="incoming">Próximamente <i class="fas fa-hourglass-half"></i></span>
+                    </div>
                 </div>
                 <div class="glass-card reveal">
                     <div class="card-icon"><i class="fas fa-tools"></i></div>
                     <h3>Utility Tool Suite</h3>
-                    <p>Herramientas diseñadas para resolver problemas cotidianos de datos.</p>
-                    <a href="#" class="link-btn">Próximamente <i class="fas fa-arrow-right"></i></a>
+                    <p>Conjunto de herramientas diseñadas para transformar y limpiar datos masivos eficientemente.</p>
+                    <div class="card-links">
+                        <span class="incoming">Próximamente <i class="fas fa-hourglass-half"></i></span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -132,17 +172,24 @@
                     <div class="project-content">
                         <span class="badge">Especial</span>
                         <h3>Social Media Downloader Bot</h3>
-                        <p>Bot avanzado para descargar contenido de Instagram y TikTok sin marca de agua. Arquitectura
-                            distribuida en Render y MongoDB.</p>
+                        <p>Optimicé el proceso de descarga de contenido para equipos de marketing, eliminando marcas de
+                            agua automáticamente. Implementé una arquitectura distribuida que soporta miles de
+                            peticiones mensuales con alta disponibilidad.</p>
                         <ul class="tech-list">
-                            <li>Python</li>
-                            <li>Telegram API</li>
-                            <li>Render</li>
-                            <li>Cron-Jobs</li>
+                            <li><i class="fab fa-python"></i> Python</li>
+                            <li><i class="fas fa-robot"></i> Telegram API</li>
+                            <li><i class="fas fa-cloud"></i> Render</li>
+                            <li><i class="fas fa-database"></i> MongoDB</li>
                         </ul>
                         <div class="project-links">
-                            <a href="https://telegram.me/MiBotmagico_bot" class="btn btn-sm btn-primary tg-link">Probar
-                                Bot <i class="fab fa-telegram-plane"></i></a>
+                            <a href="https://telegram.me/MiBotmagico_bot" class="btn btn-sm btn-primary tg-link"
+                                target="_blank">
+                                <i class="fab fa-telegram-plane"></i> Demo en Vivo
+                            </a>
+                            <a href="https://github.com/Alexander-Des-fedora" class="btn btn-sm btn-outline"
+                                target="_blank">
+                                <i class="fab fa-github"></i> Ver Código
+                            </a>
                         </div>
                     </div>
                     <div class="project-visual reveal">
@@ -157,14 +204,15 @@
         <div class="container">
             <div class="consultancy-box reveal">
                 <div class="consult-info">
-                    <h2>Consultoría Técnica</h2>
-                    <p>Optimizo tus flujos en Render.com y el diseño de tus bases de datos NoSQL.</p>
+                    <h2>Escale su Infraestructura</h2>
+                    <p>Optimizo ecosistemas en <strong>Render.com</strong> y diseño arquitecturas de datos de alto
+                        rendimiento.</p>
                     <ul>
-                        <li><i class="fas fa-check"></i> Optimización de Bots de Telegram</li>
-                        <li><i class="fas fa-check"></i> Despliegue en Render y Cloud</li>
-                        <li><i class="fas fa-check"></i> Arquitectura MongoDB</li>
+                        <li><i class="fas fa-check"></i> Optimización de Bots y Microservicios</li>
+                        <li><i class="fas fa-check"></i> Despliegue CI/CD y Gestión Cloud</li>
+                        <li><i class="fas fa-check"></i> Modelado de Datos NoSQL Eficiente</li>
                     </ul>
-                    <a href="#contact" class="btn btn-white">Reservar Consulta</a>
+                    <a href="#contact" class="btn btn-white">Reservar Auditoría Gratis</a>
                 </div>
                 <div class="consult-icon">
                     <i class="fas fa-headset"></i>
@@ -215,7 +263,7 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2026 DevStudio. Todos los derechos reservados.</p>
+                <p>&copy; 2025 Alexander<span>Code</span>. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>

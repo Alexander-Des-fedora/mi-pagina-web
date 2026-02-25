@@ -1,4 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // 0. Loader Handling
+    const loader = document.getElementById('loader');
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            loader.classList.add('fade-out');
+        }, 500);
+    });
+
     // 8. Light/Dark Mode Toggle (Moved up so 'body' is defined before binary animation)
     const themeToggle = document.getElementById('themeToggle');
     const body = document.body;
@@ -103,16 +111,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.getElementById('contactForm');
     const formStatus = document.getElementById('formStatus');
 
+    // List of common disposable/temporary email domains
+    const disposableDomains = [
+        'mailinator.com', '10minutemail.com', 'guerrillamail.com', 'tempmail.com',
+        'dispostable.com', 'getnada.com', 'mail.tm', 'mail.gw', 'yopmail.com',
+        'protonmail.ch', 'sharklasers.com', 'mailnesia.com', 'trashmail.com'
+    ];
+
     if (contactForm) {
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             const submitBtn = contactForm.querySelector('.submit-btn');
             const originalBtnText = submitBtn.innerText;
 
+            const formData = new FormData(contactForm);
+            const email = formData.get('email').toLowerCase();
+            const domain = email.split('@')[1];
+
+            // Check for disposable email
+            if (disposableDomains.includes(domain)) {
+                formStatus.innerHTML = '<p class="error-msg">Por favor, usa un correo electrónico permanente. Los correos temporales no están permitidos.</p>';
+                setTimeout(() => { formStatus.innerHTML = ''; }, 5000);
+                return;
+            }
+
             submitBtn.innerText = 'Enviando...';
             submitBtn.disabled = true;
-
-            const formData = new FormData(contactForm);
 
             try {
                 const response = await fetch(contactForm.action, {
@@ -172,7 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ctx.fillStyle = body.classList.contains('light-mode') ? 'rgba(248, 250, 252, 0.1)' : 'rgba(2, 6, 23, 0.1)';
             ctx.fillRect(0, 0, width, height);
 
-            ctx.fillStyle = '#00ff41'; // Matrix Green
+            ctx.fillStyle = body.classList.contains('light-mode') ? 'rgba(59, 130, 246, 0.5)' : '#00ff41';
             ctx.font = `${fontSize}px monospace`;
 
             for (let i = 0; i < drops.length; i++) {
