@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Nodo Central de SocialVault y Proyecto Fibonacci. Infraestructura blindada por Cloudflare.">
+    <!-- Mejoras de SEO y Rastreo -->
+    <meta name="keywords" content="Ingeniero de Sistemas, Arquitecto Digital, Zero-Trust, Ciberseguridad, Desarrollo Backend, Node.js, Rust, C++, Automatización, RPA, Bots Telegram">
+    <meta name="author" content="AlexanderCodec">
+    <meta name="robots" content="index, follow">
+    <!-- (Opcional) link canonical si tienes el dominio final -->
+    <link rel="canonical" href="https://alexandercodec.com">
+    <link rel="icon" type="image/jpeg" href="./images/botmagico.dolloardimg.jpg">
+    <meta name="google-site-verification" content="google0db20c63d58e0252" />
+    <!-- SEO & Social Media -->
+    <meta property="og:title" content="AlexanderCodec | Ingeniería Superior en C++, Rust y Automatización">
+    <meta property="og:description"
+        content="Nodo Central de SocialVault y Proyecto Fibonacci. Infraestructura blindada por Cloudflare.">
+    <meta property="og:image" content="./images/botmagico.dolloardimg.jpeg">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AlexanderCodec | Ingeniería Superior en C++, Rust y Automatización">
+    <meta name="twitter:description"
+        content="Nodo Central de SocialVault y Proyecto Fibonacci. Infraestructura blindada por Cloudflare.">
+    <meta name="twitter:image" content="./images/botmagico.dolloardimg.jpeg">
+    <title>AlexanderCodec</title>
+    <link rel="shortcut icon" href="./images/botmagico.dolloardimg.jpeg" type="image/jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;600;800&family=Fira+Code:wght@400;500&family=Roboto+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+
+<body class="dark-mode">
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                document.body.classList.remove('dark-mode');
+                document.body.classList.add('light-mode');
+            }
+        })();
+    </script>
+    <!-- Animación de carga eliminada a petición del usuario -->
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Alexander<span>Codec</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#vault-core">MySocialVault</a></li>
+                <li><a href="#fibonacci-core">Proyecto Fibonacci</a></li>
+                <li><a href="#economy">Economía</a></li>
+                <li><a href="#infra">Infraestructura</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#about">Sobre Mí</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero-section">
+        <canvas id="binaryCanvas"></canvas>
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1 class="fade-in">ALEXANDER<span class="indigo-gradient">CODEC</span> <br><span
+                    class="cyan">Digital</span> Architect</h1>
+            <p class="fade-in-delay">Sinfonía de código, seguridad y automatización. <br>Desarrollamos el futuro de la
+                soberanía digital con precisión técnica.</p>
+            <div class="hero-btns fade-in-delay">
+                <a href="#fibonacci-core" class="btn btn-emerald">FIBO Protocol</a>
+                <a href="#vault-core" class="btn btn-cyan">Social Vault</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <!-- CORE 1: MySocialVault -->
+    <section id="vault-core" class="vault-section section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="core-badge badge-cyan"><i class="fas fa-shield-alt"></i> Multimedia Sovereignty</span>
+                <h2 class="reveal">MySocialVault</h2>
+                <div class="accent-line" style="background: var(--cyan-core);"></div>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <h3>Evolución de 'MySocialVault'</h3>
+                    <p>MySocialVault es la plataforma definitiva para la gestión de contenido multimedia. Especializada
+                        en la descarga de activos de <strong>TikTok, Instagram y YouTube</strong> con preservación de
+                        calidad original.</p>
+                    <ul class="fibo-list">
+                        <li class="fibo-item">
+                            <i class="fas fa-bolt" style="color: var(--cyan-core);"></i>
+                            <div>
+                                <h4>Procesamiento Privado</h4>
+                                <p>Cero almacenamiento de datos de usuario. Cada petición se procesa en memoria volátil
+                                    y se purga instantáneamente.</p>
+                            </div>
+                        </li>
+                        <li class="fibo-item">
+                            <i class="fas fa-wand-magic-sparkles" style="color: var(--cyan-core);"></i>
+                            <div>
+                                <h4>Watermark-Free Engine</h4>
+                                <p>Algoritmos avanzados para la eliminación nativa de marcas de agua en tiempo real.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="about-actions" style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <a href="https://telegram.me/MySocialVault_bot" class="btn btn-cyan tg-link" target="_blank">
+                            <i class="fab fa-telegram-plane"></i> @MySocialVault_bot
+                        </a>
+                        <a href="https://socialvault-core.onrender.com/" class="btn btn-glass-cyan" target="_blank">
+                            <i class="fas fa-globe"></i> Descargar en la Web
+                        </a>
+                    </div>
+                </div>
+                <div class="about-stats reveal">
+                    <div class="glass-card cyan-edge"
+                        style="padding: 40px; border-radius: 24px; background: var(--card-bg); backdrop-filter: blur(10px); text-align: center;">
+                        <i class="fas fa-microchip vault-icon"></i>
+                        <h4>High-Speed Processing</h4>
+                        <p>Infraestructura optimizada para entrega en < 1.5s</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE 2: Proyecto Fibonacci (Lazarus Core v4.0) -->
+    <section id="fibonacci-core" class="fibonacci-section section-padding bg-alt">
+        <div class="container">
+            <div class="section-header">
+                <span class="core-badge badge-emerald"><i class="fas fa-microchip"></i> Lazarus Core v4.0 | Zero-Trust
+                    Ecosystem</span>
+                <h2 class="reveal">Proyecto Fibonacci: Ingeniería Crítica</h2>
+                <div class="accent-line" style="background: var(--emerald-core);"></div>
+                <div class="philosophy-box reveal">
+                    <p>Arquitectura distribuida bajo disciplina <strong>Zero-Trust</strong>. Utilizamos la secuencia de
+                        Fibonacci como semilla criptográfica dinámica para generar tokens impredecibles y vínculos de
+                        hardware (HWID) irreplicables.</p>
+                </div>
+            </div>
+
+            <div class="modules-grid expanded reveal">
+                <!-- Módulo A: El Cerebro -->
+                <div class="module-card design-v4">
+                    <div class="module-header">
+                        <i class="fas fa-microchip"></i>
+                        <h3>CODEC ENGINE: CORE</h3>
+                        <span class="version-tag">Rust Optimized</span>
+                    </div>
+                    <div class="module-body">
+                        <ul class="tech-stack-list">
+                            <li><i class="fab fa-rust"></i> <strong>Lazarus Core:</strong> Orquestación Ed25519 y
+                                Sharding en Astra DB (4 fragmentos).</li>
+                            <li><i class="fas fa-project-diagram"></i> <strong>Infraestructura:</strong> Despliegue en
+                                red Akash DePIN con anonimato Tor.</li>
+                            <li><i class="fas fa-book"></i> <strong>Ledger COBOL:</strong> Gestión contable atómica para
+                                activos XMR/USDT.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Módulo B: El Brazo -->
+                <div class="module-card design-v4">
+                    <div class="module-header">
+                        <i class="fas fa-code"></i>
+                        <h3>CODEC INTERFACE: EXEC</h3>
+                        <span class="version-tag">C++ Native</span>
+                    </div>
+                    <div class="module-body">
+                        <ul class="tech-stack-list">
+                            <li><i class="fas fa-clock"></i> <strong>10-Minute Rule:</strong> Caducidad estricta de
+                                tokens para ejecución volátil.</li>
+                            <li><i class="fas fa-eraser"></i> <strong>SecureZeroMemory:</strong> Wiping de RAM proactivo
+                                y anti-forense.</li>
+                            <li><i class="fas fa-ghost"></i> <strong>Anti-Debug:</strong> Detección de VM y camuflaje
+                                mediante Noise Injection.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Módulo C: PsyOps -->
+                <div class="module-card design-v4">
+                    <div class="module-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>CODEC SHIELD: PRIVACY</h3>
+                        <span class="version-tag">Stealth Core</span>
+                    </div>
+                    <div class="module-body">
+                        <ul class="tech-stack-list">
+                            <li><i class="fas fa-file-code"></i> <strong>Fileless Arch:</strong> Resiliencia sin
+                                persistencia en disco duro.</li>
+                            <li><i class="fas fa-trash-alt"></i> <strong>Purga 24h:</strong> Autodestrucción cíclica de
+                                registros financieros.</li>
+                            <li><i class="fas fa-biohazard"></i> <strong>Metadatos Tier-4:</strong> Firmas disuasorias
+                                de nivel criptográfico industrial.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tech-inventory reveal">
+                <div class="inventory-grid">
+                    <div class="inventory-col">
+                        <h5>Stack Backend</h5>
+                        <p>Rust (ring, ed25519), Astra DB, Monero SDK, COBOL Logic.</p>
+                    </div>
+                    <div class="inventory-col">
+                        <h5>Stack Inyector</h5>
+                        <p>C++ (Boost.Asio, Crypto++), libimobiledevice, WinAPI (HWID Lock).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ECONOMY: Economía Blindada -->
+    <section id="economy" class="economy-section section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="core-badge badge-cyan"><i class="fas fa-coins"></i> Secure Logistics</span>
+                <h2 class="reveal">Economía Blindada</h2>
+                <div class="accent-line"></div>
+                <p style="margin-top: 15px; color: var(--text-muted);">Sistemas financieros con anonimato total y
+                    paridad en tiempo real.</p>
+            </div>
+
+            <div class="economy-grid reveal">
+                <!-- Tarjeta 1: Acceso / Precio -->
+                <div class="economy-card-premium">
+                    <span class="economy-label">Acceso Operativo</span>
+                    <div class="price-box">
+                        <span class="currency-symbol">20.00 PEN</span>
+                        <p>Soles Peruanos</p>
+                    </div>
+                    <p class="eco-desc">Tarifa plana de uso para la automatización de MySocialVault y Proyectos
+                        Fibonacci.</p>
+                </div>
+
+                <!-- Tarjeta 2: Crypto Anónima -->
+                <div class="economy-card-premium">
+                    <span class="economy-label">Capitalización Blindada</span>
+                    <div class="crypto-icons">
+                        <i class="fab fa-monero xmr-neon"></i>
+                        <i class="fas fa-tether usdt-neon"></i>
+                    </div>
+                    <p class="eco-desc">Aceptamos <strong>XMR (Monero)</strong> y <strong>USDT (TRC-20)</strong>.
+                        Oráculo de precios con purga de registros en 24h.</p>
+                </div>
+
+                <!-- Tarjeta 3: Consultoría / Soporte -->
+                <div class="economy-card-premium">
+                    <span class="economy-label">Ingeniería & Consultoría</span>
+                    <div class="price-box">
+                        <i class="fas fa-project-diagram infra-icon-glow"></i>
+                    </div>
+                    <p class="eco-desc">¿Necesitás apoyo en tu proyecto? Consultoría en infraestructuras Zero-Trust y
+                        desarrollo Lazarus a medida.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INFRA: Infraestructura de Red Blindada -->
+    <section id="infra" class="infra-section section-padding bg-alt">
+        <div class="container">
+            <div class="section-header">
+                <span class="core-badge"><i class="fas fa-network-wired"></i> Network Architecture</span>
+                <h2 class="reveal">Infraestructura Blindada</h2>
+                <div class="accent-line"></div>
+                <p style="margin-top: 20px; color: var(--text-muted);">Red descentralizada de alta disponibilidad y
+                    latencia ultra-baja.</p>
+            </div>
+
+            <div class="infra-grid reveal">
+                <div class="infra-stats">
+                    <div class="stat-item">
+                        <span class="stat-value">99.9%</span>
+                        <span class="stat-label">Uptime Garantizado</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">
+                            < 100ms</span>
+                                <span class="stat-label">Latencia Global</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">256-bit</span>
+                        <span class="stat-label">Encriptación E2E</span>
+                    </div>
+                </div>
+
+                <div class="network-map-container">
+                    <div class="network-visual">
+                        <div class="node-pulse node-1"></div>
+                        <div class="node-pulse node-2"></div>
+                        <div class="node-pulse node-3"></div>
+                        <div class="node-line line-1"></div>
+                        <div class="node-line line-2"></div>
+                        <i class="fas fa-microchip network-core-icon"></i>
+                    </div>
+                    <div class="infra-info">
+                        <h3>Nodos Distribuidos</h3>
+                        <p>Nuestra red utiliza <strong>Akash Network</strong> para despliegues descentralizados,
+                            protegidos por túneles <strong>Cloudflare Magic Transit</strong> y enrutamiento
+                            <strong>Tor</strong> para anonimato operativo absoluto.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES: Servicios de Alto Rendimiento -->
+    <section id="services" class="services-section section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="core-badge"><i class="fas fa-code-merge"></i> Development & Architecting / v4.0</span>
+                <h2 class="reveal">Mis Servicios de Desarrollo</h2>
+                <div class="accent-line"></div>
+                <p style="margin-top: 15px; color: var(--text-muted);">Soluciones integrales de automatización para
+                    flujos de trabajo críticos.</p>
+            </div>
+
+            <div class="services-grid-new reveal">
+                <!-- 1. Bots de Telegram -->
+                <div class="service-card-modern">
+                    <div class="card-icon"><i class="fab fa-telegram"></i></div>
+                    <h3>Bots de Telegram de Alto Rendimiento</h3>
+                    <p>Desde asistentes personalizados hasta Mini Apps completas dentro del ecosistema de Telegram.</p>
+                    <ul class="service-list-mini">
+                        <li><i class="fas fa-check"></i> <strong>Gestión de Comunidades:</strong> Moderación y filtrado
+                            de spam inteligente.</li>
+                        <li><i class="fas fa-check"></i> <strong>Integración con APIs:</strong> Consultas en tiempo real
+                            y procesamiento de pagos.</li>
+                        <li><i class="fas fa-check"></i> <strong>Mini Apps:</strong> Interfaces web completas que corren
+                            dentro del chat.</li>
+                    </ul>
+                </div>
+
+                <!-- 2. RPA & Workflows -->
+                <div class="service-card-modern">
+                    <div class="card-icon"><i class="fas fa-robot"></i></div>
+                    <h3>Automatización de Procesos (RPA)</h3>
+                    <p>Optimización de tareas repetitivas mediante flujos de trabajo digitales eficientes.</p>
+                    <ul class="service-list-mini">
+                        <li><i class="fas fa-check"></i> <strong>Sincronización de Datos:</strong> Conexión entre CRMs y
+                            bases de datos.</li>
+                        <li><i class="fas fa-check"></i> <strong>Notificaciones Inteligentes:</strong> Alertas ante
+                            fallos o eventos críticos.</li>
+                        <li><i class="fas fa-check"></i> <strong>Scraping & Monitoreo:</strong> Vigilancia de precios y
+                            cambios web (Legal & Ético).</li>
+                    </ul>
+                </div>
+
+                <!-- 3. IA & LLMs -->
+                <div class="service-card-modern">
+                    <div class="card-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Integración de Inteligencia Artificial</h3>
+                    <p>Lógica avanzada basada en LLMs (GPT-4/Claude) para entendimiento contextual.</p>
+                    <ul class="service-list-mini">
+                        <li><i class="fas fa-check"></i> <strong>Atención al Cliente IA:</strong> Resolución de dudas
+                            técnicas complejas.</li>
+                        <li><i class="fas fa-check"></i> <strong>Procesamiento NLP:</strong> El bot entiende la
+                            intención, no solo comandos.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Diferencial Técnico -->
+            <div class="technical-diff-container reveal">
+                <h3 class="mono-title">Mi Diferencial Técnico (El toque del Ingeniero)</h3>
+                <div class="diff-grid">
+                    <div class="diff-item">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                        <h5>Escalabilidad</h5>
+                        <p>Arquitecturas preparadas para recibir miles de mensajes por segundo.</p>
+                    </div>
+                    <div class="diff-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <h5>Seguridad</h5>
+                        <p>Webhooks seguros, cifrado de datos y gestión de secretos industriales.</p>
+                    </div>
+                    <div class="diff-item">
+                        <i class="fas fa-chart-line"></i>
+                        <h5>Monitoreo</h5>
+                        <p>Panel integrado para visualizar el estado de salud y métricas del bot.</p>
+                    </div>
+                </div>
+                <div class="docker-banner">
+                    <p><i class="fab fa-docker"></i> <strong>Entrega Profesional:</strong> Entregamos el bot en
+                        contenedores <strong>Docker</strong> para que puedas hostearlo donde quieras sin problemas de
+                        compatibilidad.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="faq-container reveal">
+                <h4 class="mono-title">Consultoría & Estrategia (FAQ)</h4>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h5>¿Por qué Telegram es mejor para bots complejos?</h5>
+                        <p>Por su API abierta, estabilidad de servidores y el soporte nativo para Mini Apps que permite
+                            interfaces ricas e interactivas.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h5>¿Qué es un Webhook y por qué lo usamos?</h5>
+                        <p>Es una notificación automática que permite al bot recibir datos al instante sin desperdiciar
+                            recursos, garantizando rapidez y seguridad superior.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="services-cta reveal">
+                <h3>¿Tienes un flujo de trabajo que quieras automatizar?</h3>
+                <a href="#contact" class="btn btn-emerald btn-lg"><i class="fas fa-headset"></i> Solicitar Consultoría
+                    Técnica</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ABOUT: Perfil de Ingeniería -->
+    <section id="about" class="about-me-section section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="core-badge"><i class="fas fa-terminal"></i> Current Profile / v4.0</span>
+                <h2 class="reveal">Alexander<span>Codec</span></h2>
+                <p class="role-subtitle reveal">Ingeniero de Sistemas | Arquitecto de Soluciones & Optimización
+                    Performance</p>
+                <div class="accent-line"></div>
+            </div>
+
+            <!-- New Professional Bio Card -->
+            <div class="profile-bio-container reveal">
+                <div class="profile-card">
+                    <div class="profile-img-box">
+                        <img src="./images/alexander_avatar.png" alt="AlexanderCodec Avatar" class="profile-avatar" oncontextmenu="return false;" draggable="false">
+                        <div class="status-indicator">
+                            <span class="pulse"></span>
+                            Available for Engineering
+                        </div>
+                    </div>
+                    <div class="profile-info">
+                        <div class="info-header">
+                            <h3>EL MANIFIESTO CODEC</h3>
+                            <div class="badge-row">
+                                <span class="tech-pill-sm">Sistemas Críticos</span>
+                                <span class="tech-pill-sm">Blockchain Logic</span>
+                                <span class="tech-pill-sm">Backend Architect</span>
+                            </div>
+                        </div>
+                        <p class="bio-text">
+                            "En la intersección entre el dato puro y la experiencia humana, mi trabajo es decodificar la
+                            complejidad. No solo escribo software; construyo infraestructuras que resisten el tiempo y
+                            escalan sin fricción. Como arquitecto digital, mi obsesión es la eficiencia radical y la
+                            seguridad innegociable."
+                        </p>
+                        <div class="bio-stats">
+                            <div class="bio-stat-item">
+                                <span class="stat-num">1+</span>
+                                <span class="stat-txt">Años de Exp.</span>
+                            </div>
+                            <div class="bio-stat-item">
+                                <span class="stat-num">1000k+</span>
+                                <span class="stat-txt">Líneas de Código</span>
+                            </div>
+                            <div class="bio-stat-item">
+                                <span class="stat-num">20+</span>
+                                <span class="stat-txt">Proyectos Globales</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bento Grid of Mastery (Refinado) -->
+            <div class="bento-grid-container reveal">
+                <div class="bento-item main-back">
+                    <div class="bento-content">
+                        <i class="fas fa-server"></i>
+                        <h4>Arquitectura & Core (Backend)</h4>
+                        <p>Diseño de Microservicios: Desarrollamos APIs robustas con <strong>Node.js /
+                                TypeScript</strong> y <strong>Python</strong>, priorizando la escalabilidad horizontal y
+                            la seguridad de datos.</p>
+                        <div class="bento-tags">
+                            <span class="tag-pill">Rust</span>
+                            <span class="tag-pill">FastAPI</span>
+                            <span class="tag-pill">Go</span>
+                        </div>
+                    </div>
+                    <div class="bento-blur-glow cyan-glow"></div>
+                </div>
+
+                <div class="bento-item data-block">
+                    <div class="bento-content">
+                        <i class="fas fa-database"></i>
+                        <h4>Modelado de Datos</h4>
+                        <p>Estrategias avanzadas de persistencia en <strong>Astra DB</strong>, PostgreSQL y Redis para
+                            alta disponibilidad.</p>
+                    </div>
+                    <div class="bento-blur-glow green-glow"></div>
+                </div>
+
+                <div class="bento-item front-block">
+                    <div class="bento-content">
+                        <i class="fab fa-react"></i>
+                        <h4>Estrategia de Interfaz (Frontend)</h4>
+                        <p>Diseño de interfaces reactivas y SSR utilizando <strong>Next.js</strong> y
+                            <strong>React</strong> para experiencias de usuario fluidas.
+                        </p>
+                        <div class="bento-tags">
+                            <span class="tag-pill">TailwindCSS</span>
+                            <span class="tag-pill">Framer Motion</span>
+                        </div>
+                    </div>
+                    <div class="bento-blur-glow purple-glow"></div>
+                </div>
+
+                <div class="bento-item infra-block">
+                    <div class="bento-content">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <h4>Infraestructura & Ops</h4>
+                        <p>Soberanía digital mediante despliegues en <strong>Akash Network</strong>, Dockerizacion y
+                            gestión de nubes híbridas.</p>
+                    </div>
+                    <div class="bento-blur-glow blue-glow"></div>
+                </div>
+
+                <div class="bento-item security-block">
+                    <div class="bento-content">
+                        <i class="fas fa-user-shield"></i>
+                        <h4>Seguridad Blindada</h4>
+                        <p>Criptografía industrial, protocolos OAuth2 y auditoría de seguridad zero-trust.</p>
+                    </div>
+                    <div class="bento-blur-glow red-glow"></div>
+                </div>
+
+                <div class="bento-item perf-block">
+                    <div class="bento-content">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <h4>High Performance</h4>
+                        <p>Optimización extrema de latencia. Refinamiento en C++ para motores de ejecución crítica.</p>
+                    </div>
+                    <div class="bento-blur-glow gold-glow"></div>
+                </div>
+
+                <div class="bento-item auto-block">
+                    <div class="bento-content">
+                        <i class="fas fa-terminal"></i>
+                        <h4>Automation Workflows</h4>
+                        <p>Ingeniería de automatización para pipelines CI/CD y despliegues automáticos globales.</p>
+                    </div>
+                    <div class="bento-blur-glow indigo-glow"></div>
+                </div>
+            </div>
+
+            <!-- Pillars of Engineering -->
+            <div class="pillars-section reveal">
+                <h3 class="pillars-title">MIS TRES PILARES FUNDAMENTALES</h3>
+                <div class="pillars-grid">
+                    <div class="pillar-card">
+                        <div class="pillar-icon"><i class="fas fa-expand-arrows-alt"></i></div>
+                        <h5>Escalabilidad Horizontal</h5>
+                        <p>Sistemas diseñados para crecer sin límites, gestionando millones de eventos con eficiencia
+                            computacional.</p>
+                    </div>
+                    <div class="pillar-card">
+                        <div class="pillar-icon"><i class="fas fa-bolt"></i></div>
+                        <h5>Optimización de Latencia</h5>
+                        <p>Cada milisegundo cuenta. Utilizamos Redis, Memcached y afinamiento de código nativo para
+                            velocidades extremas.</p>
+                    </div>
+                    <div class="pillar-card">
+                        <div class="pillar-icon"><i class="fas fa-code"></i></div>
+                        <h5>Arquitectura Limpia (SOLID)</h5>
+                        <p>Código legible y mantenible. Aplicamos principios SOLID y Clean Architecture en cada línea
+                            escrita.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tools & System Quote -->
+            <div class="tools-showcase-modern reveal">
+                <div class="tools-header">
+                    <h4>STREACK TECNOLÓGICO</h4>
+                    <p>Dominio avanzado en herramientas de nivel industrial</p>
+                </div>
+                <div class="tools-tags">
+                    <span class="tech-tag"><i class="fab fa-js-square"></i> JavaScript (ES6+)</span>
+                    <span class="tech-tag"><i class="fab fa-python"></i> Python (FastAPI/Django)</span>
+                    <span class="tech-tag"><i class="fab fa-rust"></i> Rust (Lazarus Core)</span>
+                    <span class="tech-tag"><i class="fab fa-node"></i> Node.js (TypeScript)</span>
+                    <span class="tech-tag"><i class="fas fa-database"></i> PostgreSQL / NoSQL</span>
+                    <span class="tech-tag"><i class="fab fa-docker"></i> Docker / Kubernetes</span>
+                    <span class="tech-tag"><i class="fab fa-git-alt"></i> Git Flow</span>
+                    <span class="tech-tag"><i class="fab fa-linux"></i> Linux Admin</span>
+                </div>
+                <div class="system-quote-modern">
+                    <i class="fas fa-quote-left"></i>
+                    <p>La complejidad es el enemigo de la ejecución. Mi objetivo es simplificar lo complejo a través de
+                        una ingeniería de software superior.</p>
+                    <cite>— AlexanderCodec</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact" class="contact-section section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="reveal">Contacto</h2>
+                <div class="accent-line"></div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <!-- Fantasma contacto (Contact Ghost) Reubicado Limpio -->
+                    <div class="contact-ghost-container">
+                        <div class="contact-ghost">
+                          <div class="cg-eyes">
+                            <div class="cg-eye cg-eye--left js-cg-eye">
+                              <div class="cg-pupil js-cg-pupil"></div>
+                            </div>
+                            <div class="cg-eye cg-eye--right js-cg-eye">
+                              <div class="cg-pupil js-cg-pupil"></div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <h3>¿Tienes un proyecto en mente?</h3>
+                    <p>Envíame un mensaje y te responderé en breve.</p>
+                    <div class="social-links">
+                        <a href="https://www.threads.net/@alexander.vega.n" target="_blank"><i
+                                class="fab fa-threads"></i></a>
+                        <a href="https://www.facebook.com/alexander.veganunez.71" target="_blank"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/alexander.vega.n?igsh=MTQzcngweGhuMnBnbQ=="
+                            target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form reveal">
+                    <form action="https://formspree.io/f/mqedgdbg" method="POST" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Tu Nombre" required>
+                        </div>
+                        <!-- Honeypot Anti-Spam de Formspree (invisible para usuarios, bloquea bots si lo llenan) -->
+                        <div class="form-group" style="display:none;">
+                            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Tu Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" rows="5" placeholder="Cuéntame sobre tu proyecto..."
+                                required></textarea>
+                        </div>
+                        <div class="form-group" style="display: flex; justify-content: center; margin: 0;">
+                            <!-- Turnstile invisible/discreto asegurando la página de fondo -->
+                            <div class="cf-turnstile" data-sitekey="0x4AAAAAACs2CPy_RQJa3ubW" data-theme="dark" data-appearance="interaction-only"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary submit-btn">Enviar Mensaje</button>
+                        <div id="formStatus" class="form-status"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-carousel-container reveal">
+                    <div class="carousel-track">
+                        <i class="fab fa-js-square"></i>
+                        <i class="fab fa-python"></i>
+                        <i class="fab fa-rust"></i>
+                        <i class="fab fa-node-js"></i>
+                        <i class="fas fa-database"></i>
+                        <i class="fab fa-docker"></i>
+                        <i class="fab fa-git-alt"></i>
+                        <i class="fab fa-linux"></i>
+                        <i class="fab fa-react"></i>
+                        <i class="fas fa-server"></i>
+                        <i class="fas fa-code"></i>
+                        <!-- Duplicado para efecto scroll infinito sin saltos -->
+                        <i class="fab fa-js-square"></i>
+                        <i class="fab fa-python"></i>
+                        <i class="fab fa-rust"></i>
+                        <i class="fab fa-node-js"></i>
+                        <i class="fas fa-database"></i>
+                        <i class="fab fa-docker"></i>
+                        <i class="fab fa-git-alt"></i>
+                        <i class="fab fa-linux"></i>
+                        <i class="fab fa-react"></i>
+                        <i class="fas fa-server"></i>
+                        <i class="fas fa-code"></i>
+                    </div>
+                </div>
+                <p>&copy; 2025 Alexander<span>Codec</span>. Todos los derechos reservados.</p>
+                <p style="margin-top: 15px;">
+                    <a href="juego.html" target="_blank" style="color: var(--cyan-core); font-weight: bold; text-decoration: none; padding: 5px 10px; border: 1px solid var(--cyan-core); border-radius: 5px; transition: all 0.3s;">
+                        <i class="fas fa-gamepad"></i> Alexander Games
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Ghost Follower -->
+    <div id="ghost" class="ghost">
+        <div class="ghost__head">
+            <div class="ghost__eyes"></div>
+            <div class="ghost__mouth"></div>
+        </div>
+        <div class="ghost__tail">
+            <div class="ghost__rip"></div>
+        </div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="position:absolute; width:0; height:0; visibility:hidden;">
+        <defs>
+            <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="ghost-blur" />
+                <feColorMatrix in="ghost-blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 16 -7" result="ghost-gooey" />
+            </filter>
+        </defs>
+    </svg>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

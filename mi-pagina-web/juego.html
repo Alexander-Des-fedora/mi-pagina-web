@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego Secreto - Proyecto Fibonacci</title>
+    <link rel="icon" type="image/jpeg" href="./images/botmagico.dolloardimg.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="juego.css">
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+<body>
+    <!-- Capa flotante de Victoria Animada -->
+    <div id="winner-overlay" class="winner-overlay">
+        <div class="winner-text">
+            <span>🎉 <strong id="winner-name-big">¡Ganador!</strong> 🎉</span>
+            <p>Alexander Games</p>
+        </div>
+    </div>
+
+    <!-- Modal de Configuración -->
+    <div id="setup-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>Alexander Games</h2>
+            <div class="mode-selection">
+                <button id="btn-pvp" class="active">👤 1 vs 1 (Local)</button>
+                <button id="btn-pve">🤖 Vs AlexanderGames</button>
+            </div>
+            <div class="names-selection">
+                <input type="text" id="p1-name" placeholder="Nombre Jugador 1" maxlength="15" value="Jugador 1">
+                <input type="text" id="p2-name" placeholder="Nombre Jugador 2" maxlength="15" value="Jugador 2">
+            </div>
+            <div class="symbol-selection">
+                <p>Jugador 1 Juega con:</p>
+                <div class="symbol-btns">
+                    <button id="btn-sym-x" class="active">⨯ (X)</button>
+                    <button id="btn-sym-o">⭘ (O)</button>
+                </div>
+            </div>
+            <button id="btn-start-game" class="start-btn">Iniciar Partida</button>
+        </div>
+    </div>
+    
+    <h1 id="game-title">
+        <span>AlexanderGames</span>
+      <small id="game-subtitle">(2 players)</small>
+    </h1>
+    
+    <table class="xo shiny-edges">
+      <tr>
+        <td tabindex="0">&nbsp;</td>
+        <td tabindex="0"></td>
+        <td tabindex="0"></td>
+      </tr>
+      <tr>
+        <td tabindex="0">&nbsp;</td>
+        <td tabindex="0"></td>
+        <td tabindex="0"></td>
+      </tr>
+      <tr>
+        <td tabindex="0">&nbsp;</td>
+        <td tabindex="0"></td>
+        <td tabindex="0"></td>
+      </tr>
+    </table>
+    
+    <footer>
+      
+      <div class="game-status">
+        <div class="turn" id="turn-display">
+          <!-- Text updated via JS -->
+          <span>Esperando jugadores...</span>
+        </div>
+        <div id="win-display" style="display: none;">
+          <span class="win rubberband"><strong id="win-text">🎉 ¡JUGADOR gana!</strong></span>
+        </div>
+      </div>
+      
+        <button class="reset-btn">
+             <span class="reset">Reset</span>
+             <span class="new-game">New Game</span>
+        </button>
+         
+        <p class="description" style="margin-top:.5rem; width: 100%; text-align: center;">
+             Con tecnología de Ingeniería de Sistemas Fibonacci
+        </p>
+         
+        <hr>
+      
+      <details class="description">
+        <summary>Instrucciones ⌨️</summary>
+        <div>
+          Navega usando las flechas de tu teclado o
+          <kbd>W</kbd>, <kbd>A</kbd>, <kbd>S</kbd>, y <kbd>D</kbd>. 
+          Usa la <kbd>Spacebar</kbd> u <kbd>Enter</kbd> para colocar las fichas.
+        </div>
+      </details>
+      
+      <hr>
+      <small style="font-style: italic; text-align: center;">
+        <a class="built-by hover-slide" href="index.html">← Volver al Maletín</a>
+      </small>
+    </footer>
+    
+    <div class="theme-switch-wrapper" style="position: absolute; top: 20px; right: 20px; z-index: 999;">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round">
+                <i class="fas fa-sun" style="font-size: 14px; position:absolute; left:6px; top: 7px; color: #f1c40f;"></i>
+                <i class="fas fa-moon" style="font-size: 14px; position:absolute; right:7px; top: 7px; color: #f1c40f;"></i>
+                <div class="ball"></div>
+            </div>
+        </label>
+    </div>
+    
+    <div class="pyro">
+      <div class="before"></div><div class="after"></div>
+    </div>
+    
+    <script src="juego.js"></script>
+</body>
+</html>
