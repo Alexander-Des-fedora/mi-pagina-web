@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alexander-desarrollador.onrender.com/sitemap.xml
