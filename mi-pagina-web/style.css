@@ -1,12 +1,12 @@
 :root {
-    --primary: #6366f1; /* Indigo */
-    --primary-dark: #4f46e5;
-    --accent: #d946ef; /* Magenta/Purple */
-    --cyan-core: #06b6d4;
-    --emerald-core: #10b981;
-    --bg-dark: #020617;
+    --primary: #f97316; /* Naranja VegaCodec */
+    --primary-dark: #ea580c;
+    --accent: #fb923c; /* Ámbar VegaCodec */
+    --cyan-core: #3b82f6; /* Azul VegaCodec */
+    --emerald-core: #22c55e; /* Verde VegaCodec */
+    --bg-dark: #06100a;
     --bg-darker: #000000;
-    --bg-alt: #020617;
+    --bg-alt: #06100a;
     --card-bg: rgba(15, 23, 42, 0.4);
     --card-bg-hover: rgba(15, 23, 42, 0.8);
     --text-main: #f8fafc;
@@ -48,7 +48,7 @@ body.light-mode .hero-section {
 }
 
 body.light-mode .logo span {
-    text-shadow: 0 0 15px rgba(99, 102, 241, 0.2);
+    text-shadow: 0 0 15px rgba(249, 115, 22, 0.2);
 }
 
 /* Reset & Base */
@@ -217,13 +217,13 @@ ul {
 .btn-cyan {
     background: var(--cyan-core);
     color: var(--bg-darker);
-    box-shadow: 0 5px 15px rgba(34, 211, 238, 0.3);
+    box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
 }
 
 .btn-cyan:hover {
-    background: #06b6d4;
+    background: #3b82f6;
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(34, 211, 238, 0.4);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
 }
 
 .btn-emerald {
@@ -239,9 +239,9 @@ ul {
 }
 
 .btn-glass-cyan {
-    background: rgba(34, 211, 238, 0.1);
+    background: rgba(59, 130, 246, 0.1);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(34, 211, 238, 0.3);
+    border: 1px solid rgba(59, 130, 246, 0.3);
     color: var(--cyan-core);
     padding: 12px 30px;
     border-radius: 50px;
@@ -257,12 +257,12 @@ ul {
 }
 
 .btn-glass-cyan:hover {
-    background: rgba(34, 211, 238, 0.2);
+    background: rgba(59, 130, 246, 0.2);
     border-color: var(--cyan-core);
-    box-shadow: 0 0 25px rgba(34, 211, 238, 0.6), inset 0 0 15px rgba(34, 211, 238, 0.1);
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.6), inset 0 0 15px rgba(59, 130, 246, 0.1);
     transform: translateY(-3px);
     color: #fff;
-    text-shadow: 0 0 8px rgba(34, 211, 238, 0.8);
+    text-shadow: 0 0 8px rgba(59, 130, 246, 0.8);
 }
 
 /* Navbar */
@@ -309,7 +309,7 @@ ul {
     color: white;
     border-color: var(--primary);
     transform: scale(1.1) rotate(15deg);
-    box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+    box-shadow: 0 0 20px rgba(249, 115, 22, 0.4);
 }
 
 .nav-container {
@@ -333,7 +333,7 @@ ul {
 .logo span {
     color: var(--primary);
     position: relative;
-    text-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+    text-shadow: 0 0 20px rgba(249, 115, 22, 0.4);
 }
 
 .nav-links {
@@ -399,7 +399,7 @@ ul {
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(34, 211, 238, 0.1), transparent 40%);
+    background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(59, 130, 246, 0.1), transparent 40%);
     z-index: 1;
     pointer-events: none;
     transition: background 0.2s ease;
@@ -438,11 +438,11 @@ body.light-mode #binaryCanvas {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.3));
+    filter: drop-shadow(0 0 10px rgba(249, 115, 22, 0.3));
 }
 
 .hero-content h1 span.cyan {
-    background: linear-gradient(to right, var(--cyan-core), #67e8f9);
+    background: linear-gradient(to right, var(--cyan-core), #93c5fd);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -614,7 +614,7 @@ body.light-mode #binaryCanvas {
     transform: translateY(-8px) scale(1.02);
     border-color: var(--primary);
     background: var(--card-bg-hover);
-    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.15);
+    box-shadow: 0 20px 40px rgba(249, 115, 22, 0.15);
 }
 
 .card-icon {
@@ -753,7 +753,7 @@ body.light-mode #binaryCanvas {
 
 /* Consultancy Section */
 .bg-accent {
-    background: linear-gradient(135deg, #4f46e5, #8b5cf6);
+    background: linear-gradient(135deg, #f97316, #fb923c);
 }
 
 .consultancy-box {
@@ -1037,7 +1037,7 @@ footer {
 }
 /* --- Updated Dual-Core & Black-Ops Styles --- */
 
-.vault-section { background: radial-gradient(circle at top right, rgba(34, 211, 238, 0.05), transparent); }
+.vault-section { background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.05), transparent); }
 .fibonacci-section { background: radial-gradient(circle at bottom left, rgba(16, 185, 129, 0.05), transparent); }
 
 .core-badge {
@@ -1052,11 +1052,11 @@ footer {
     margin-bottom: 20px;
 }
 
-.badge-cyan { background: rgba(34, 211, 238, 0.1); color: var(--cyan-core); border: 1px solid var(--border-cyan); }
+.badge-cyan { background: rgba(59, 130, 246, 0.1); color: var(--cyan-core); border: 1px solid var(--border-cyan); }
 .badge-emerald { background: rgba(16, 185, 129, 0.1); color: var(--emerald-core); border: 1px solid var(--border-emerald); }
 
 .glass-card { transition: var(--transition); border: 1px solid var(--border); }
-.glass-card.cyan-edge:hover { border-color: var(--cyan-core); box-shadow: 0 0 30px rgba(34, 211, 238, 0.15); }
+.glass-card.cyan-edge:hover { border-color: var(--cyan-core); box-shadow: 0 0 30px rgba(59, 130, 246, 0.15); }
 .glass-card.emerald-edge:hover { border-color: var(--emerald-core); box-shadow: 0 0 30px rgba(16, 185, 129, 0.15); }
 
 .tech-tag {
@@ -1742,7 +1742,7 @@ footer {
 /* --- About Me Professional Styles --- */
 .about-me-section {
     background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.05), transparent),
-                radial-gradient(circle at bottom right, rgba(99, 102, 241, 0.03), transparent);
+                radial-gradient(circle at bottom right, rgba(249, 115, 22, 0.03), transparent);
     position: relative;
     overflow: hidden;
 }
@@ -1979,7 +1979,7 @@ footer {
 .blue-glow { bottom: -50px; left: -50px; background: var(--primary); }
 .red-glow { top: 50%; left: 50%; transform: translate(-50%, -50%); background: #ef4444; }
 .gold-glow { bottom: -50px; left: -50px; background: #fbbf24; }
-.indigo-glow { top: -50px; right: -50px; background: #6366f1; }
+.indigo-glow { top: -50px; right: -50px; background: #f97316; }
 
 .bento-item:hover {
     transform: translateY(-8px);
