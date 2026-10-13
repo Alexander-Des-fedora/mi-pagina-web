@@ -34,7 +34,7 @@
       "name": "Alexander Vega Núñez",
       "alternateName": "AlexanderCodec",
       "url": "https://alexander-desarrollador.onrender.com",
-      "image": "https://alexander-desarrollador.onrender.com/images/alexander_avatar.png",
+      "image": "https://alexander-desarrollador.onrender.com/images/alexander_avatar.webp",
       "jobTitle": "Desarrollador Backend",
       "worksFor": {
         "@type": "Organization",
@@ -100,7 +100,6 @@
     </nav>
 
     <section id="hero" class="hero-section">
-        <canvas id="binaryCanvas"></canvas>
         <div class="overlay"></div>
         <div class="hero-content">
             <h1 class="fade-in">ALEXANDER<span class="indigo-gradient">CODEC</span> <br><span
@@ -174,7 +173,7 @@
     <section id="services" class="services-section section-padding">
         <div class="container">
             <div class="section-header">
-                <span class="core-badge"><i class="fas fa-code-merge"></i> Development & Architecting / v4.0</span>
+                <span class="core-badge"><i class="fas fa-code-merge"></i> Desarrollo & Arquitectura</span>
                 <h2 class="reveal">Mis Servicios de Desarrollo</h2>
                 <div class="accent-line"></div>
                 <p style="margin-top: 15px; color: var(--text-muted);">Soluciones integrales de automatización para
@@ -293,7 +292,7 @@
             <div class="profile-bio-container reveal">
                 <div class="profile-card">
                     <div class="profile-img-box">
-                        <img src="./images/alexander_avatar.png" alt="AlexanderCodec Avatar" class="profile-avatar" oncontextmenu="return false;" draggable="false">
+                        <img src="./images/alexander_avatar.webp" alt="AlexanderCodec Avatar" class="profile-avatar" oncontextmenu="return false;" draggable="false">
                         <div class="status-indicator">
                             <span class="pulse"></span>
                             Disponible para proyectos
@@ -474,19 +473,6 @@
             </div>
             <div class="contact-grid">
                 <div class="contact-info reveal">
-                    <!-- Fantasma contacto (Contact Ghost) Reubicado Limpio -->
-                    <div class="contact-ghost-container">
-                        <div class="contact-ghost">
-                          <div class="cg-eyes">
-                            <div class="cg-eye cg-eye--left js-cg-eye">
-                              <div class="cg-pupil js-cg-pupil"></div>
-                            </div>
-                            <div class="cg-eye cg-eye--right js-cg-eye">
-                              <div class="cg-pupil js-cg-pupil"></div>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
                     <h3>¿Tienes un proyecto en mente?</h3>
                     <p>Envíame un mensaje y te responderé en breve.</p>
                     <div class="social-links">
@@ -533,34 +519,18 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-carousel-container reveal">
-                    <div class="carousel-track">
-                        <i class="fab fa-js-square"></i>
-                        <i class="fab fa-python"></i>
-                        <i class="fab fa-rust"></i>
-                        <i class="fab fa-node-js"></i>
-                        <i class="fas fa-database"></i>
-                        <i class="fab fa-docker"></i>
-                        <i class="fab fa-git-alt"></i>
-                        <i class="fab fa-linux"></i>
-                        <i class="fab fa-react"></i>
-                        <i class="fas fa-server"></i>
-                        <i class="fas fa-code"></i>
-                        <!-- Duplicado para efecto scroll infinito sin saltos -->
-                        <i class="fab fa-js-square"></i>
-                        <i class="fab fa-python"></i>
-                        <i class="fab fa-rust"></i>
-                        <i class="fab fa-node-js"></i>
-                        <i class="fas fa-database"></i>
-                        <i class="fab fa-docker"></i>
-                        <i class="fab fa-git-alt"></i>
-                        <i class="fab fa-linux"></i>
-                        <i class="fab fa-react"></i>
-                        <i class="fas fa-server"></i>
-                        <i class="fas fa-code"></i>
-                    </div>
+                <div class="footer-tech-row reveal">
+                    <i class="fab fa-js-square" title="JavaScript"></i>
+                    <i class="fab fa-python" title="Python"></i>
+                    <i class="fab fa-rust" title="Rust"></i>
+                    <i class="fab fa-node-js" title="Node.js"></i>
+                    <i class="fas fa-database" title="Bases de datos"></i>
+                    <i class="fab fa-docker" title="Docker"></i>
+                    <i class="fab fa-git-alt" title="Git"></i>
+                    <i class="fab fa-linux" title="Linux"></i>
+                    <i class="fab fa-react" title="React"></i>
                 </div>
-                <p>&copy; 2025 Alexander<span>Codec</span>. Todos los derechos reservados.</p>
+                <p>&copy; 2026 Alexander<span>Codec</span>. Todos los derechos reservados.</p>
                 <p style="margin-top: 15px;">
                     <a href="juego.html" target="_blank" style="color: var(--cyan-core); font-weight: bold; text-decoration: none; padding: 5px 10px; border: 1px solid var(--cyan-core); border-radius: 5px; transition: all 0.3s;">
                         <i class="fas fa-gamepad"></i> Alexander Games
@@ -569,25 +539,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- Ghost Follower -->
-    <div id="ghost" class="ghost">
-        <div class="ghost__head">
-            <div class="ghost__eyes"></div>
-            <div class="ghost__mouth"></div>
-        </div>
-        <div class="ghost__tail">
-            <div class="ghost__rip"></div>
-        </div>
-    </div>
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="position:absolute; width:0; height:0; visibility:hidden;">
-        <defs>
-            <filter id="goo">
-                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="ghost-blur" />
-                <feColorMatrix in="ghost-blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 16 -7" result="ghost-gooey" />
-            </filter>
-        </defs>
-    </svg>
 
     <script src="script.js"></script>
 </body>
