@@ -7,21 +7,6 @@ document.addEventListener("mousemove", (e) => {
   }
 });
 
-// --- SEGURIDAD: Bloqueos de Copia e Inspección ---
-document.addEventListener('contextmenu', e => e.preventDefault());
-document.addEventListener('keydown', e => {
-    if(e.key === 'F12' || 
-      (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) || 
-      (e.ctrlKey && e.key === 'U') || 
-      (e.ctrlKey && e.key === 'S')) {
-        e.preventDefault();
-        return false;
-    }
-});
-document.addEventListener('selectstart', e => e.preventDefault());
-document.addEventListener('dragstart', e => e.preventDefault());
-// --- FIN SEGURIDAD ---
-
 // Setup Settings
 let isPvE = false;
 let p1Name = "Jugador 1";

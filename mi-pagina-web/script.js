@@ -1,8 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 0. Loader Handle: Quitado a petición del usuario.
-    // Animación de carga desactivada por completo.
-
-    // 8. Light/Dark Mode Toggle
+    // Light/Dark Mode Toggle
     const themeToggle = document.getElementById('themeToggle');
     const body = document.body;
     const themeIcon = themeToggle?.querySelector('i');
@@ -78,26 +75,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelector('.nav-links');
 
     if (navToggle && navLinks) {
+        const setMenu = (open) => {
+            navLinks.classList.toggle('active', open);
+            navToggle.classList.toggle('open', open);
+            navToggle.setAttribute('aria-expanded', String(open));
+        };
+
         navToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            navToggle.classList.toggle('open');
+            setMenu(!navLinks.classList.contains('active'));
         });
 
         // Close mobile menu when a link is clicked
-        const links = navLinks.querySelectorAll('a');
-        links.forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                navToggle.classList.remove('open');
-            });
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => setMenu(false));
         });
 
         // Close menu when clicking outside
         document.addEventListener('click', (e) => {
             if (!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
-                navLinks.classList.remove('active');
-                navToggle.classList.remove('open');
+                setMenu(false);
             }
+        });
+
+        // Close menu with Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') setMenu(false);
         });
     }
 
@@ -131,12 +133,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.getElementById('contactForm');
     const formStatus = document.getElementById('formStatus');
 
-    // List of common disposable/temporary email domains
+    // Dominios de correos temporales/desechables (solo servicios de usar y tirar).
+    // Nota: proveedores legítimos de privacidad como ProtonMail NO van aquí.
     const disposableDomains = [
         'mailinator.com', '10minutemail.com', 'guerrillamail.com', 'tempmail.com',
         'dispostable.com', 'getnada.com', 'mail.tm', 'mail.gw', 'yopmail.com',
-        'protonmail.ch', 'sharklasers.com', 'mailnesia.com', 'trashmail.com',
-        '33mail.com', 'anonymousemail.me', 'fakeinbox.com', 'temp-mail.org'
+        'sharklasers.com', 'mailnesia.com', 'trashmail.com',
+        'fakeinbox.com', 'temp-mail.org'
     ];
 
     if (contactForm) {
@@ -154,20 +157,26 @@ document.addEventListener('DOMContentLoaded', () => {
             // Reset input state
             emailInput.classList.remove('invalid-input');
 
-            // Validation logic (Identity & Humanity)
-            if (!turnstileToken || disposableDomains.includes(domain)) {
+            // Validación básica en el navegador (la protección real contra spam
+            // la aplica Formspree en su servidor; esto solo evita envíos obvios).
+            let errorMsg = '';
+            if (disposableDomains.includes(domain)) {
+                errorMsg = 'Usa un correo real (no uno temporal) para que pueda responderte.';
                 emailInput.classList.add('invalid-input');
-                formStatus.innerHTML = '<div class="terminal-alert">FALLO DE AUTENTICACIÓN: Verifique su humanidad e identidad de correo.</div>';
-                
-                // Clear errors
-                setTimeout(() => { 
-                    formStatus.innerHTML = ''; 
+            } else if (!turnstileToken) {
+                errorMsg = 'Completa la verificación anti-spam y vuelve a intentarlo. Si no aparece, desactiva el bloqueador de anuncios para esta página.';
+            }
+
+            if (errorMsg) {
+                formStatus.innerHTML = `<div class="terminal-alert">${errorMsg}</div>`;
+                setTimeout(() => {
+                    formStatus.innerHTML = '';
                     emailInput.classList.remove('invalid-input');
-                }, 5000);
+                }, 6000);
                 return;
             }
 
-            submitBtn.innerText = 'AUTENTICANDO...';
+            submitBtn.innerText = 'ENVIANDO...';
             submitBtn.disabled = true;
 
             try {
@@ -219,61 +228,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-
-/*--------------------
-Protección de HTML y Código
---------------------*/
-document.addEventListener('contextmenu', e => {
-    // Evita el clic derecho en todo el documento para que no puedan Inspeccionar o Guardar fácilmente
-    e.preventDefault();
-});
-
-document.addEventListener('keydown', e => {
-    // F12
-    if(e.keyCode === 123) {
-        e.preventDefault();
-        return false;
-    }
-    // Ctrl+Shift+I (Herramientas de Desarrollador)
-    if(e.ctrlKey && e.shiftKey && e.keyCode === 73) {
-        e.preventDefault();
-        return false;
-    }
-    // Ctrl+Shift+C (Inspect Element)
-    if(e.ctrlKey && e.shiftKey && e.keyCode === 67) {
-        e.preventDefault();
-        return false;
-    }
-    // Ctrl+Shift+J (Consola)
-    if(e.ctrlKey && e.shiftKey && e.keyCode === 74) {
-        e.preventDefault();
-        return false;
-    }
-    // Ctrl+U (Ver Código Fuente)
-    if(e.ctrlKey && e.keyCode === 85) {
-        e.preventDefault();
-        return false;
-    }
-    // Ctrl+S (Guardar Página Web)
-    if(e.ctrlKey && e.keyCode === 83) {
-        e.preventDefault();
-        return false;
-    }
-});
-
-/*--------------------
-Seguimiento del cursor (usado por los ojos del fantasma de contacto)
---------------------*/
-let cursorMouse = { x: window.innerWidth / 2, y: window.innerHeight / 2, dir: '' };
-const getMouse = (e) => {
-    cursorMouse = {
-        x: e.clientX || e.pageX || (e.touches && e.touches[0].pageX) || 0 || window.innerWidth / 2,
-        y: e.clientY || e.pageY || (e.touches && e.touches[0].pageY) || 0 || window.innerHeight / 2,
-        dir: (getMouse.x > e.clientX) ? 'left' : 'right'
-    }
-};
-['mousemove', 'touchstart', 'touchmove'].forEach(e => {
-    window.addEventListener(e, getMouse);
-});
-
 

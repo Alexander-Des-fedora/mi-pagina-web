@@ -1460,3 +1460,38 @@ footer {
 
 
 
+
+/* ---- Ajustes de accesibilidad y contenido ---- */
+/* El botón del menú móvil antes era un <div>; se reinicia el estilo nativo del <button> */
+button.nav-toggle {
+    background: none;
+    border: 0;
+    padding: 4px;
+    font: inherit;
+    color: inherit;
+}
+
+/* Foco visible para quien navega con teclado */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--cyan-core);
+    outline-offset: 3px;
+}
+
+/* Nota pequeña (aviso de uso responsable en MySocialVault) */
+.vault-note {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin: 18px 0;
+    line-height: 1.5;
+}
+
+.vault-note a {
+    color: var(--cyan-core);
+}
+
+.vault-section .service-list-mini {
+    margin: 14px 0;
+}
